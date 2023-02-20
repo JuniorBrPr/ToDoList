@@ -27,19 +27,12 @@ ul {
     min-height: 500px;
 }
 
-.form {
-    height: 100%;
-    width: 100%;
-}
-
 .form-input, .task {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
 
-.form-input {
+.form-input, #input-task, #add-task-button {
     height: 50px;
     width: 100%;
 }
@@ -54,20 +47,20 @@ ul {
 }
 
 #input-task, #add-task-button {
-    height: 100%;
-    width: 100%;
+    /*height: 100%;*/
+    /*width: 100%;*/
     font-size: 14px;
     font-weight: 700;
     text-align: center;
     border: none;
-    outline: none;
+    outline-style: none;
 }
 
 #input-task {
+    height: 44px;
     color: black;
     background: inherit;
     border-bottom: saddlebrown 4px solid;
-    margin-bottom: 4px;
 }
 
 #add-task-button {
@@ -91,6 +84,10 @@ ul {
 }
 
 .delete-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     height: 18px;
     width: 18px;
     background-color: red;
