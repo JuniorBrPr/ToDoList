@@ -17,7 +17,9 @@ function loadTaskList() {
     taskListArray = JSON.parse(localStorage.getItem("tasks"));
     if (taskListArray !== null) {
         taskListArray.forEach((task) => {
-            createTask(task.text, task.completed);
+            if (task !== null){
+                createTask(task.text, task.completed);
+            }
         });
     } else {
         taskListArray = [];
