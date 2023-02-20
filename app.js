@@ -6,6 +6,12 @@ let taskListArray = [];
 addTaskBtn.addEventListener("click", addTask);
 document.addEventListener("DOMContentLoaded", loadTaskList);
 document.addEventListener("DOMContentLoaded", saveTasks);
+newTaskText.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        addTask();
+    }
+});
 
 function loadTaskList() {
     taskListArray = JSON.parse(localStorage.getItem("tasks"));
