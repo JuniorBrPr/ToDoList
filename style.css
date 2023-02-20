@@ -109,3 +109,8 @@ ul {
     flex: 2 1 auto;
     justify-content: start;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
