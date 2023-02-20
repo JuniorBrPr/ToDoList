@@ -5,7 +5,7 @@ let taskListArray = [];
 
 addTaskBtn.addEventListener("click", addTask);
 document.addEventListener("DOMContentLoaded", loadTaskList);
-document.addEventListener("DOMContentLoaded", saveTasks);
+
 newTaskText.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -15,11 +15,9 @@ newTaskText.addEventListener("keydown", (event) => {
 
 function loadTaskList() {
     taskListArray = JSON.parse(localStorage.getItem("tasks"));
-    if (taskListArray !== null) {
+    if (taskListArray !== null && taskListArray !== undefined) {
         taskListArray.forEach((task) => {
-            if (task !== null){
-                createTask(task.text, task.completed);
-            }
+            createTask(task.text, task.completed);
         });
     } else {
         taskListArray = [];
@@ -86,9 +84,9 @@ function setTaskStatus(taskText) {
 
 function deleteTask() {
     this.parentNode.remove();
-    delete taskListArray[taskListArray.findIndex(
-        (task) => task.text === this.parentNode.querySelector(".task").innerText)
-        ];
+    taskListArray.splice(
+        taskListArray.findIndex((task) => task.text === this.parentNode.querySelector(".task").innerText),
+        1);
     saveTasks();
 }
 
