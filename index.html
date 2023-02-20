@@ -9,34 +9,35 @@
 <main>
     <section class="container">
         <h1>To-Do List</h1>
-        <form class="form" action="" method="post">
+        <form class="form">
             <div class="form-input">
                 <div class="task-input">
                     <input id="input-task" type="text" name="task" placeholder="Enter task">
                 </div>
                 <div class="add-button-con">
-                    <button id="add-task-button" type="submit">Add Task</button>
+                    <button id="add-task-button" type="button">Add Task</button>
                 </div>
             </div>
-            <ul id="task-list">
-                <li class="task-item">
-                    <input type="checkbox" name="complete" value="complete">
-                    <span class="task">Do groceries</span>
-                    <button class="delete-btn" type="button" name="delete" value="delete">x</button>
-                </li>
-                <li class="task-item">
-                    <input type="checkbox" name="complete" value="complete">
-                    <span class="task">Read 10 pages</span>
-                    <button class="delete-btn" type="button" name="delete" value="delete">x</button>
-                </li>
-                <li class="task-item">
-                    <input type="checkbox" name="complete" value="complete">
-                    <span class="task">Go to the gym</span>
-                    <button class="delete-btn" type="button" name="delete" value="delete">x</button>
-                </li>
-            </ul>
         </form>
+        <ul id="task-list">
+            <li class="task-item">
+                <input type="checkbox" name="completed" value="completed">
+                <span class="task">Do groceries</span>
+                <button class="delete-btn" type="button" name="delete" value="delete">x</button>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" name="completed" value="completed">
+                <span class="task">Read 10 pages</span>
+                <button class="delete-btn" type="button" name="delete" value="delete">x</button>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" name="completed" value="completed">
+                <span class="task">Go to the gym</span>
+                <button class="delete-btn" type="button" name="delete" value="delete">x</button>
+            </li>
+        </ul>
     </section>
 </main>
+<script src="app.js"></script>
 </body>
 </html>
